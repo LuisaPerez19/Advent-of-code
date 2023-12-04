@@ -17,22 +17,6 @@ end
 
 puts "Part 1 solution: #{calibration_document}"
 
-# Alternative answer
-
-# def calibration_document
-#   numbers = INPUT.split("\n").map do |line|
-#     scan = line.scan(/\d/)
-
-#     (scan[0] + scan[-1]).to_i
-#   end
-
-#   numbers.sum
-# end
-
-# puts "Part 1 solution: #{calibration_document}"
-
-
-
 # Part 2 ________________________________________________
 
 # 1.create a hash which will assing the letters key to a digit value
