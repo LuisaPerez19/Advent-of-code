@@ -17,6 +17,18 @@ end
 
 puts "Part 1 solution: #{calibration_document}"
 
+def calibration_document
+  numbers = INPUT.split("\n").map do |line|
+    first_digit = (line.scan(/\d/)[0])
+    last_digit = (line.scan(/\d/)[-1])
+    calibration_value = (first_digit + last_digit).to_i
+  end
+
+  numbers.sum
+end
+
+puts "Part 1 solution: #{calibration_document}"
+
 # Part 2 ________________________________________________
 
 # 1.create a hash which will assing the letters key to a digit value
@@ -44,6 +56,7 @@ def refined_calibration_document
   first_digit = (LETTER_TO_DIGIT[matches.first] || matches.first)
 
   last_digit = (LETTER_TO_DIGIT[matches.last] || matches.last)
+
   calibration_number = (first_digit + last_digit).to_i
   }
 
